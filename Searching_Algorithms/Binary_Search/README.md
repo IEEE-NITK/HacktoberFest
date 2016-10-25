@@ -1,0 +1,3 @@
+okay, in the binary search we work with only sorted arrays. Without loss of generality consider an array sorted in ascending order. Now, let the element to be searched be ele. 
+check if the element is the mid elelment of the array, if it is so store its index in a variable and return it back, else if ele is greater than the mid element of the array, restrict your search only to the right half of the array by increasing the lower index to [mid+1].
+else decrease the upper limit to [mid-1] so that search is restricted to the left side of the array. mid is calculated as [low+high]/2 where low=0 and high=(n-1) where n is the size of the array.
