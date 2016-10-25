@@ -1,0 +1,5 @@
+1.Name: Jeevan Addepalli
+2.Year: Btech first year
+3.Department: Mining
+4.Interests: Coding
+5.GitHub Username: JeevanAddepalli
