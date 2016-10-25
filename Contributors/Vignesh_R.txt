@@ -1,0 +1,5 @@
+1. Name: Vignesh R
+2. Year: 3
+3. Department: CSE
+4. Interests: HPC, GPGPU
+5. GitHub Username: vignesh-r24
