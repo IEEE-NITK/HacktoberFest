@@ -1,0 +1,5 @@
+1.Name : Ayush Kumar
+2. Year: First
+3. Department : Computer engineeering
+4. Interests : Machine Learning, OS Development
+5. Github Username : novicecoder113
