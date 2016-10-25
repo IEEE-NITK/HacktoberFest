@@ -1,0 +1,10 @@
+Name:
+Aneesh Aithal
+Year:
+2nd year
+Department:
+CSE
+Interests:
+Competitive coding, Networks
+Github username:
+aneesh297
