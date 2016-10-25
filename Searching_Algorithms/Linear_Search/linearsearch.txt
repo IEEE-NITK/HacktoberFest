@@ -1,0 +1,8 @@
+Algorithm:
+Step1-Begin 
+Step2-get a list of numbers
+Step3-choose number to be searched for
+Step4-move through each element of the array(using for loop)
+Step5-if element of array is equal to the element to be searched for print the element and its position 	
+Step6-if element not found print element not present 
+Step7-end
