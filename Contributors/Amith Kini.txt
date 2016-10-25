@@ -1,0 +1,5 @@
+Name: Amith Kini
+Year: 2nd Year
+Department: IT
+Interests: Ethical Hacking, Android Development, Machine Learning, Data Mining
+Github Username: amithmkini
