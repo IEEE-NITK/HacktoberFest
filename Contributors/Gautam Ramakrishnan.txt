@@ -1,0 +1,6 @@
+Name: Gautam Ramakrishnan
+Year: 1st Year
+Department: Computer Engineering
+Interests: AI and Machine Learning
+Github Username: gautamramk
+
