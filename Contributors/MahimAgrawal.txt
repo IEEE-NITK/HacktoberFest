@@ -1,0 +1,5 @@
+Name : Mahim Agrawal
+Year : 1
+Department : Mechanical
+Interests : Python, Android, tutorials, web-development
+Github Username : mahim23
