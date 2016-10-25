@@ -1,0 +1,7 @@
+
+Just add your following details in a file called __<yourname>.txt__:
+1. Name:Chenna Keshava B S
+2. Year:1st year
+3. Department:CSE
+4. Interests:open source, machine learning and ai
+5. GitHub Username:chennakeshava1998
