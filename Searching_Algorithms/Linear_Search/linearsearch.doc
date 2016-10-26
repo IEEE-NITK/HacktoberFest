@@ -1,0 +1,41 @@
+In Linear Search the list is searched sequentially and the position is returned if the key element to be searched is available in the list, otherwise -1 is returned. The search in Linear Search starts at the beginning of an array and move to the end, testing for a match at each item.
+
+All the elements preceding the search element are traversed before the search element is traversed. i.e. if the element to be searched is in position 10, all elements form 1-9 are checked before 10.
+
+Algorithm : Linear search implementation
+
+bool linear_search ( int *list, int size, int key, int* rec )
+
+{
+
+     // Basic Linear search
+
+     bool found = false;
+
+     int i;
+
+     for ( i = 0; i < size; i++ )
+
+           {
+
+                if ( key == list[i] )
+
+                      break;
+
+            }
+
+              if ( i < size )
+
+                 {
+
+                      found = true;
+
+                      rec = &list[i];
+
+                 }
+
+               return found;
+
+}  
+
+The code searches for the element through a loop starting form 0 to n. The loop can terminate in one of two ways. If the index variable i reach the end of the list, the loop condition fails. If the current item in the list matches the key, the loop is terminated early with a break statement. Then the algorithm tests the index variable to see if it is less than that size (thus the loop was terminated early and the item was found), or not (and the item was not found).
