@@ -9,8 +9,7 @@ int displayMenu()
 {
     int choice;
     
-    cout << " \n Welcome to the Calculator 300x\n Please select a Calculation Option\n\n"
-         << " (1) Addition\n"
+         cout<< " (1) Addition\n"
          << " (2) Subtraction\n"
          << " (3) Division\n"
          << " (4) Mulpilication\n"
