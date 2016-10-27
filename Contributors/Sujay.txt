@@ -1,0 +1,5 @@
+Name: Sujay Mondal
+Year: 1st
+Department: MCA
+Interests: Competetive Coding , Algorithms , OS 
+Github Username: sujaydcss
