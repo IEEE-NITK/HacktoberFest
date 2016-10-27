@@ -1,0 +1,29 @@
+The bubble sort is the oldest and simplest sort in use. Unfortunately, it's also the slowest. 
+The bubble sort works by comparing each item in the list with the item next to it, and swapping them if required.
+The algorithm repeats this process until it makes a pass all the way through the list without swapping any items (in other words, all items are in the correct order). 
+This causes larger values to "bubble" to the end of the list while smaller values "sink" towards the beginning of the list. 
+The bubble sort is generally considered to be the most inefficient sorting algorithm in common usage. 
+Under best-case conditions (the list is already sorted), the bubble sort can approach a constant O(n) level of complexity. General-case is an abysmal O(n2). 
+
+Example-
+The list "5,4,9,7,2,8" needs to be sorted from lowest to highest. The following steps are carried out:
+Pass 1 
+      First (5) and second (4) elements compared. 4 less than 5 therefore elements inverted. 
+      Current list: 4,5,9,7,2,8 
+      Second (now 5) and third (9) elements compared. In correct order so no change. 
+      Current list: 4,5,9,7,2,8 
+      9 and 7 compared and inverted 
+      Current list: 4,5,7,9,2,8 
+      9 and 2 compared and inverted 
+      Current list: 4,5,7,2,9,8 
+      9 and 8 compared and inverted 
+      Current list: 4,5,7,2,8,9 
+Pass 2 
+      Same method used in Pass 1 applied to current list (4,5,7,2,8,9)  
+      Resultant list: 4,5,2,7,8,9 
+Pass 3 
+      Resultant list: 4,2,5,7,8,9 
+Pass 4 
+      Resultant list: 2,4,5,7,8,9 
+Pass 5 
+No changes would be made in this pass therefore the algorithm has reached its termination point and the list is sorted .
