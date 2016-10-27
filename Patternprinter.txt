@@ -1,0 +1,60 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{   int r,l,p=0,x=1,y;
+    cout<< "enter no of rows=columns (should be odd)\n";
+    cin>>r;
+    l=(r-1)/2;
+    y=r-2;
+    for(int z=l;z>=1;z--)
+    {
+     for(int i=1;i<=z;i++)
+     {
+      cout<<".";
+      }
+      for(int j=1;j<=x+p;j++)
+      {
+      cout<<"*";
+      }
+      for(int i=1;i<=z;i++)
+     {
+      cout<<".";
+      }
+      p++;x++;
+      cout<<endl;
+       }
+       for(int k=r;k>=1;k--)
+       {cout<<"*";
+       }
+       cout<<endl;
+       p=0;
+       for(int o=1;o<=l;o++)
+    {
+     for(int t=1;t<=o;t++)
+     {
+      cout<<".";
+      }
+      for(int u=y-p;u>=1;u--)
+      {
+      cout<<"*";
+      }
+      for(int t=1;t<=o;t++)
+     {
+      cout<<".";
+
+      }
+      p++;y--;
+      cout<<endl;
+       }
+
+
+
+
+
+
+
+    return 0;
+}
+
