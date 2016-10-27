@@ -1,0 +1,5 @@
+1.Name : Omkar Prabhu
+2.Year : 1
+3.Department : CSE
+4.Interests : Open source,web-development,java,python,c++,android
+5.Git- username : omkarprabhu-98

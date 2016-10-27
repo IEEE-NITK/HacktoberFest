@@ -1,0 +1,21 @@
+#include<stdio.h>
+void main()
+{
+  float a,b,x;
+  char n;
+  printf("Enter the 2 operands");
+  scanf("%f%f",&a,&b);
+  printf("Enter the operator");
+  scanf("%c",&n);
+  if(n=='+')
+   x=a+b;
+  else if(n=='-')
+   x=a-b;
+  else if(n=='*')
+   x=a*b;
+  else if(b!=0)
+   printf("Divide by zero");
+  else 
+    x=a/b;
+  printf("The value after operation is %f",x);
+}   
