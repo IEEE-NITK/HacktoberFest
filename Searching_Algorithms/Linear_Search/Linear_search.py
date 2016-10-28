@@ -3,7 +3,7 @@ print("Enter the size of the array")
 n = int(input())
 
 #reads the elements in the array
-print("Enter the array elements")
+print("Enter the array elements seperated by space")
 arr = list(map(int, input().split()))
 
 #take the input for the search element
