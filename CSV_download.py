@@ -1,5 +1,5 @@
 from urllib import request
-goog_url = 'http://real-chart.finance.yahoo.com/table.csv?s=GOOG&d=11&e=30&f=2015&g=d&a=2&b=27&c=2014&ignore=.csv'
+goog_url = ' '    # Enter the link to your CSV file
 
 def download_stock_data(csv_url):
     response = request.urlopen(csv_url)
