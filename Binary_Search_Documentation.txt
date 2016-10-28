@@ -1,0 +1,35 @@
+Binary search relies on a divide and conquer strategy to find a value within an already-sorted collection. 
+The algorithm is deceptively simple. 
+ Let's say we have a sorted array of numbers. To find a number with a binary search, we: 
+ 1)Start with the middle number: is it bigger or smaller than our target number? Since the array is sorted, 
+   this tells us if the target would be in the left half or the right half of our array. 
+ 2)We've effectively divided the problem in half. 
+   We can "rule out" the whole half of the array that we know doesn't contain the target number. 
+ 3)Repeat the same approach (of starting in the middle) on the new half-size problem. 
+   Then do it again and again, until we either find the number or "rule out" the whole set. 
+  
+Here is a sample code for the Binary search.
+// A recursive binary search function. It returns location of x in
+// given array arr[l..r] is present, otherwise -1
+int binarySearch(int arr[], int l, int r, int x)
+{
+   if (r >= l)
+   {
+        int mid = l + (r - l)/2;
+ 
+        // If the element is present at the middle itself
+        if (arr[mid] == x)  return mid;
+ 
+        // If element is smaller than mid, then it can only be present
+        // in left subarray
+        if (arr[mid] > x) return binarySearch(arr, l, mid-1, x);
+ 
+        // Else the element can only be present in right subarray
+        return binarySearch(arr, mid+1, r, x);
+   }
+ 
+   // We reach here when element is not present in array
+   return -1;
+}
+
+The idea of binary search is to use the information that the array is sorted and reduce the time complexity to O(Logn). 
