@@ -1,0 +1,2 @@
+In binary search, the array is sorted and algorithm first checks whether the mid element is equal to the search element, else if the search element is higher than the middle element,
+then low value is increased to mid+1 whereas low was initially at the beginning of the array. If the search element is lesser than the middle element, then the high value is brought down to mid-1, high would be initially set to (n-1) where n is the size of the array.
