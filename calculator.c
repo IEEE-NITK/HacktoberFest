@@ -6,10 +6,10 @@ int main() {
     double n1,n2;
 
     printf("Enter an operator (+, -, *,): ");
-    scanf("%c", &op);
+    scanf(" %c ", &op);
 
     printf("Enter two operands: ");
-    scanf("%lf %lf",&n1, &n2);
+    scanf("%lf %lf ",&n1, &n2);
 
     switch(op)
     {
