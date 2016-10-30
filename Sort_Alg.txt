@@ -1,0 +1,17 @@
+A sorting algorithm is an algorithm that puts elements of a list in a certain order.
+The most-used orders are numerical order and lexicographical order. 
+Efficient sorting is important for optimizing the use of other algorithms (such as search and merge algorithms) which require input data to be in sorted lists; it is also often useful for canonicalizing data and for producing human-readable output.
+More formally, the output must satisfy two conditions:
+
+The output is in nondecreasing order (each element is no smaller than the previous element according to the desired total order);
+The output is a permutation (reordering) of the input.
+Sorting algorithms are often classified by:
+
+Computational complexity (worst, average and best behavior) in terms of the size of the list (n). For typical serial sorting algorithms good behavior is O(n log n), with parallel sort in O(log2 n), and bad behavior is O(n2). (See Big O notation.) Ideal behavior for a serial sort is O(n), but this is not possible in the average case. Optimal parallel sorting is O(log n). Comparison-based sorting algorithms, need at least O(n log n) comparisons for most inputs.
+Computational complexity of swaps (for "in-place" algorithms).
+Memory usage (and use of other computer resources). In particular, some sorting algorithms are "in-place". Strictly, an in-place sort needs only O(1) memory beyond the items being sorted; sometimes O(log(n)) additional memory is considered "in-place".
+Recursion. Some algorithms are either recursive or non-recursive, while others may be both (e.g., merge sort).
+Stability: stable sorting algorithms maintain the relative order of records with equal keys (i.e., values).
+Whether or not they are a comparison sort. A comparison sort examines the data only by comparing two elements with a comparison operator.
+General method: insertion, exchange, selection, merging, etc. Exchange sorts include bubble sort and quicksort. Selection sorts include shaker sort and heapsort. Also whether the algorithm is serial or parallel. The remainder of this discussion almost exclusively concentrates upon serial algorithms and assumes serial operation.
+Adaptability: Whether or not the presortedness of the input affects the running time. Algorithms that take this into account are known to be adaptive.

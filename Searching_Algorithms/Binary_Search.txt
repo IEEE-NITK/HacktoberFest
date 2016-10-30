@@ -1,0 +1,11 @@
+Binary search is one of the fundamental algorithms in computer science. In order to explore it, we’ll first build up a theoretical backbone, then use that to implement the algorithm properly and avoid those nasty off-by-one errors everyone’s been talking about.
+
+Finding a value in a sorted sequence
+In its simplest form, binary search is used to quickly find a value in a sorted sequence (consider a sequence an ordinary array for now).
+We’ll call the sought value the target value for clarity.
+Binary search maintains a contiguous subsequence of the starting sequence where the target value is surely located. 
+This is called the search space. 
+The search space is initially the entire sequence.
+At each step, the algorithm compares the median value in the search space to the target value. 
+Based on the comparison and because the sequence is sorted, it can then eliminate half of the search space.
+By doing this repeatedly, it will eventually be left with a search space consisting of a single element, the target value.
