@@ -1,2 +1,12 @@
-It is possible to take greater advantage of the ordered list if we are clever with our comparisons. In the sequential search, when we compare against the first item, there are at most n−1 more items to look through if the first item is not what we are looking for. Instead of searching the list in sequence, a binary search will start by examining the middle item. If that item is the one we are searching for, we are done. If it is not the correct item, we can use the ordered nature of the list to eliminate half of the remaining items. If the item we are searching for is greater than the middle item, we know that the entire lower half of the list as well as the middle item can be eliminated from further consideration. The item, if it is in the list, must be in the upper half.
-Before we move on to the analysis, we should note that this algorithm is a great example of a divide and conquer strategy. Divide and conquer means that we divide the problem into smaller pieces, solve the smaller pieces in some way, and then reassemble the whole problem to get the result. When we perform a binary search of a list, we first check the middle item. If the item we are searching for is less than the middle item, we can simply perform a binary search of the left half of the original list. Likewise, if the item is greater, we can perform a binary search of the right half.
+﻿The idea behind the Binary Search is to split this array in half multiple times to "zero-in" on the value we're looking for.
+Consider array [5,12,17,23,38,44,77,84,90].
+Assume we are looking for the value 44 in the array, and we want to know the index of the element that this value is located in, if, in fact, it is in the array at all (remember that we always have to prepare for the case where the element is not found at all).
+In this example, the value 44 is located in the 6th element of the array.
+In the linear search shown above, it would require six comparisons between array elements and the search key to find out that the 6th element of the array contained the value that we are looking for.
+
+1.Let min=1 and max=n.
+2.Guess the average of max and min, rounded down so that it is an integer.
+3.If you guessed the number, stop. You found it!
+4.If the guess was too low, set min to be one larger than the guess.
+5.If the guess was too high, set max to be one smaller than the guess.
+6.Go back to step two.
