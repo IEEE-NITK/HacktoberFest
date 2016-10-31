@@ -1,0 +1,11 @@
+ In general sorting means rearrangement of data according to a defined pattern. The task of a sorting algorithm is to transform the original unsorted sequence to the sorted sequence.
+
+Types of algorithms. Computer scientists differentiate between internal and external sorting algorithms. While external ones need a large amount of extra memory, the internal algorithms manipulate the original array and only need a few bytes for stack and temporary variables. With the exception of Merge Sort, all of the algorithms I'm going to describe belong to the class of internal sorting algorithms.
+
+Practical use. Sorting algorithms such as the ones covered in this doc are used in a lot of applications. Some examples are: office apps (databases, spreadsheets, word processors,...), compression utils (e.g. for Huffman encoding), computer games and even demos ;) (e.g. for Z-buffering).
+
+Limits. In this doc I only deal with the sorting of numerical sequences. But the same methods can be applied to all kinds of mono-key data, including strings. However, the algorithms I am going to describe cannot be used for sorting sequences according to several keys, e.g. surname and first name.
+
+Conventions. From now on I'll refer to the number of elements in the unsorted sequence as n. The first element gets the index 0, for which reason the last element gets the index n-1. The central value of the unsorted sequence is the element with index int n/2. Sub-sequences are sequences inside a larger sequence. I'll also use the terms "section", "partition" and "area", which are supposed to have the same meaning as "sub-sequence". "Ascending order" and "incremental order" mean "iterating forwards" (e.g. for(i=1; i<100; i++)). "Descending order" and "decremental order" mean "iterating backwards" (e.g. for(i=99; i>0; i--)).
+
+Example sequence. The initial sequence I'm going to use in order to show how the following algorithms work is 8, 4, 1, 5, 4. Our aim is to transform it into 1, 4, 4, 5, 8.
