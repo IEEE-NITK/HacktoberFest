@@ -31,7 +31,7 @@ int main() {
 
         // operator doesn't match any case constant (+, -, *, /)
         default:
-            printf("Error! operator is not correct");
+            printf("Error! operator is not correct\n");
     }
     
     return 0;
