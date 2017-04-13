@@ -1,0 +1,15 @@
+Here is the code to perform a linear search for an integer in an array:
+
+      public static int IntArrayLinearSearch(int[] data, int item) {
+         int N=data.Length;
+         for (int i=0; i < N; i++)
+            if (data[i] == item)
+               return i;
+         return -1;
+      }
+Here’s what it does:
+
+In lines 2-3 we set up a loop to go from 0 to N..1. We often use N to indicate the size of the array (and it’s much easier to type than data.Length.
+In line 4, we are checking whether data[i] == item. What this is telling us is whether we found a match for the item we are searching. If we find the match, we immediately leave the loop by returning the position where it was found.
+It is worth noting here that the array, data, may or my not be in sorted order. So our search reports the first location where we found the value. It is entirely possible that the more than one position in the array contains the matching value. If you wanted to find the next one, you could modify the IntArrayLinearSearch() method to have a third parameter, start, that allows us to continue searching from where we left off. 
+It might look something like the following:

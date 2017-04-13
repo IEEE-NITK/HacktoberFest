@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+int main()
+{
+ int i,x,y,c;
+ printf("Enter two numbers : ");
+ scanf("%d %d",&x,&y);
+ printf("1. addition\n");
+ printf("2. subtraction\n");
+ printf("3. multiplication\n");
+ printf("4. division\n");
+ printf("5. exit\n\n");
+ printf("Which action you want to perform : ");
+ scanf("%d",&i);
+ switch(i)
+ {
+  case 1:
+   c = (x+y);
+   printf("Answer = %d\n",c);
+   break;
+  case 2:
+   c = (x-y);
+   printf("Answer = %d\n",c);
+   break;
+  case 3:
+   c = (x*y);
+   printf("Answer = %d\n",c);
+   break;
+  case 4:
+   c = (x/y);
+   printf("Answer = %d\n",c);
+   break;
+  case 5 :
+   exit(0);
+  default :
+   printf("Enter valid number\n");
+ }
+ system("pause");
+ return 0;
+}

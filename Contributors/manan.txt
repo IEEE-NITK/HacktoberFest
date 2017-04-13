@@ -1,0 +1,5 @@
+Name: Manan Sharma
+Year: First Year
+Department: ECE
+Interests: coding, astronomy, quizzing
+Github username: manan-sharma

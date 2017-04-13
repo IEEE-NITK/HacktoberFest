@@ -1,0 +1,49 @@
+#include <stdio.h>
+  int main() {
+        int operand1, operand2, ch,c=1;
+        float result;
+        while (c) {
+                printf("#######Menu##########\n");
+                printf("1. Addition\n2. Subtraction\n");
+                printf("3. Division\n4. Multiplication\n");
+                printf("5. Modulus\n6. Percentage\n");
+                printf("7. Exit\nEnter your choice:");
+                scanf("%d", &ch);
+
+                /* get input operands from user */
+                if (ch != 7) {
+                        printf("Enter your operands a,b:");
+                        scanf("%d,%d", &operand1, &operand2);
+                }
+
+                /* menu driven calculator */
+                switch (ch) {
+                        case 1:
+                                result = operand1 + operand2;
+                                break;
+                        case 2:
+                                result = operand1 - operand2;
+                                break;
+                        case 3:
+                                result = (float)operand1 / operand2;
+                                break;
+                        case 4:
+                                result = operand1 * operand2;
+                                break;
+                        case 5:
+                                result = operand1 % operand2;
+                                break;
+                        case 6:
+                                result = ((float)operand1 / 100) * operand2;
+                                break;
+                        case 7:
+                                c=0;
+				break;
+                        default:
+                                printf("Please enter correct option\n");
+                                break;
+                }
+		if(c)
+                printf("Result: %f\n", result);
+        }
+  }

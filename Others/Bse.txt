@@ -1,0 +1,2 @@
+BinarySearch[l,k]
+searches sorted list l for key k and gives the position of l containing k, if k is present in l. Otherwise, if k is absent in l, the function returns  where k falls between the elements of l in positions  and .
