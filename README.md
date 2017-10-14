@@ -163,4 +163,4 @@ Instead, to drop all your local changes and commits, fetch the latest history fr
 $ git fetch origin
 
 $ git reset --hard origin/master
-``
+```
