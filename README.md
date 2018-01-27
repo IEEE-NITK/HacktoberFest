@@ -36,7 +36,7 @@ $ git add <filename>
 ```
 Add all files to staging area:
 ```
-$ git add .
+$ git add --all
 ```
 
 **Commit**
