@@ -3,7 +3,7 @@
 Here is a basic outline of how to write Git instructions in the repository!
 
 **Tell Git who you are**	
-Configure the author name and email address to be used with your commits.
+Configure the author name and email address to be used with your comments.
 
 Note that Git strips some characters (for example trailing periods) from user.name.
 ```
