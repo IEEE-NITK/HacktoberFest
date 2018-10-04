@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Net.Sockets;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
+using Windows.UI;
+using Windows.UI.Popups;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
+
+
+namespace UWPTestClientUDP
+{
+    public sealed partial class MainPage : Page
+    {
+        public MainPage()
+        {
+            this.InitializeComponent();
+        }
+
+        private void btn_Click(object sender, RoutedEventArgs e)
+        {
+
+            errorblk.Text = "";
+
+            MessageDialog dialog = new MessageDialog("");
+
+            try
+            {
+                if (AddressBox.Text == "")
+                    dialog.Content = "Insert IP Address";
+
+                if(AddressBox.Text != "")
+                {
+                    Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+
+                    var addressText = AddressBox.Text.Replace(',', '.');
+                    AddressBox.Text = addressText;
+
+                    IPAddress broadcast = IPAddress.Parse(addressText);
+
+                    byte[] sendbuf = Encoding.ASCII.GetBytes(txtblk.Text);
+                    IPEndPoint ep = new IPEndPoint(broadcast, 11000);
+
+                    s.SendTo(sendbuf, ep);
+
+                    errorblk.Foreground = new SolidColorBrush(Colors.Green);
+                    errorblk.Text = "Message Sent";
+                }
+            }
+            catch (Exception ex)
+            {
+                errorblk.Foreground = new SolidColorBrush(Colors.Red);
+
+                errorblk.Text = ex.ToString();
+            }
+        }
+    }
+}
