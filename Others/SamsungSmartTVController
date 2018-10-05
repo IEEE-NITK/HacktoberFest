@@ -1,0 +1,73 @@
+import samsungctl
+import time
+
+
+kek = 0
+
+config = {
+    "name": "samsungctl",
+    "description": "PC",
+    "id": "",
+    "host": "192.168.1.20",
+    "port": 55000,
+    "method": "legacy",
+    "timeout": 0,
+    }
+
+print("      -----------------------------------")
+print("  -------##---------#######-----##-----------")
+print("---------##---------#-----#-----##-------------")
+print("---------##---------#-----#-----##-------------")
+print("---------##---------#-----#-----##-------------")
+print("  -------######-----#######-----######-------")
+print("      -----------------------------------")
+
+
+
+
+
+with samsungctl.Remote(config) as remote:
+    while(kek == 0):
+        
+        inStr = input("-->  ")
+        
+        if "up" in inStr:
+            if len(inStr) > 2:
+                temp = inStr[2:]
+                volval = int(temp.strip())
+
+                print("vol + ", volval, "\n") 
+                for x in range(0,volval):
+                    remote.control("KEY_VOLUP")
+
+            else:            
+                remote.control("KEY_VOLUP")
+                print("vol +\n")
+            time.sleep(0.5)
+
+        elif "dw" in inStr:
+            if len(inStr) > 2:
+                temp = inStr[2:]
+                volval = int(temp.strip())
+
+                print("vol - ", volval, "\n")
+                for x in range(0,volval):
+                    remote.control("KEY_VOLDOWN")
+                
+            else:            
+                remote.control("KEY_VOLDOWN")
+                print("vol -\n")
+            time.sleep(0.5)
+
+        elif inStr == "off":
+            remote.control("KEY_POWEROFF")
+            kek = 1
+            print("#eskere")
+            time.sleep(0.5)
+            
+        elif inStr == "esci":
+            kek = 1
+            print("bye")
+
+        else:
+            print("write something")
