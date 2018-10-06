@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <time.h> //for sleep() function
+#include<stdio.h>
+#include<time.h> //for sleep() function
  
 int main()
 {
@@ -36,7 +36,7 @@ int main()
             second=0;
         }
          
-        sleep(1);   //wait till 1 second
+        sleep(1);  
     }
  
     return 0;
