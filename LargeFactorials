@@ -1,0 +1,37 @@
+#include<stdio.h>
+
+
+long long int powe(long long int  a,long long int b,long long int c)  //calculate (a^b)%m using binary exponentiation.
+{
+	long long int r;
+	r=1;
+	while(b>0)
+	{
+		if(b%2==1)
+		{
+			r=(r*a)%c;
+		}
+		a=(a*a)%c;
+		b>>=1;
+	}
+	return r;
+}
+
+
+int main() // code to calculate (x^y!)%m taking all inputs from user.
+{	
+	long long int t;
+	scanf("%lld",&t);
+	for(long long int i=0;i<t;i++)
+	{	
+		long long int x,y,m;
+		scanf("%lld%lld%lld",&x,&y,&m);	//taking inputs for a,b and c to use in funtion
+		long long int temp=x;
+		for(int j=1;j<y+1;j++)
+		{
+			temp=powe(temp,j,m);
+		}
+	printf("%lld\n",temp);
+	}
+	return 0;
+}
